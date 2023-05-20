@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -10,20 +11,20 @@ body{
 }
 
 ::selection{
-    color: #fff;
-    background: #290813;
+    color: #000000;
+    background: #1e050d;
 }
 
 .start_btn,
 .info_box,
 .quiz_box,
 .result_box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-65%, -65%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+     top: 50%;
+    left: 50%;
 }
 
 .info_box.activeInfo,
@@ -39,34 +40,34 @@ body{
     font-size: 35px;
     font-weight: 500;
     color: #20252a;
-    padding: 25px 35px;
+    padding: 25px 30px;
     outline: none;
     border: none;
-    border-radius: 5px;
-    background: #fff;
+    border-radius: 20px;
+    background: #a20505;
     cursor: pointer;
 }
 
 .info_box{
     width: 540px;
-    background: #fff;
-    border-radius: 5px;
-    transform: translate(-50%, -50%) scale(0.9);
+    background: #bd0303;
+    border-radius: 10px;
+    transform: translate(-60%, -60%) scale(0.9);
     opacity: 0;
     pointer-events: none;
-    transition: all 0.3s ease;
+    transition: all 0.6s ease;
 }
 
 .info_box .info-title{
-    padding: 0 30px;
-    border-radius: 10px 10px 0 0;
-    font-size: 25px;
+    height: 70px;
+    width: 125%;
     font-weight: 600;
-    height: 60px;
-    width: 100%;
-    border-bottom: 1px solid rgb(16, 16, 16);
-    display: flex;
     align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid rgb(180, 6, 6);
+    display: flex;
+    border-radius: 25px 10px 0 0;
+    font-size: 20px;
 }
 
 .info_box .info-list{
@@ -80,34 +81,34 @@ body{
 
 .info_box .info-list .info span{
     font-weight: 600;
-    color: #007bff;
+    color: #0c0607;
 }
 .info_box .buttons{
     height: 60px;
-    padding: 0 30px;
-    border-top: 1px solid lightgrey;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    padding: 0 30px;
+    border-top: 1px solid rgb(15, 2, 2);
 }
 
 .info_box .buttons button{
-    cursor: pointer;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid #007bff;
-    transition: all 0.3s ease;
     margin: 0 5px;
     height: 40px;
     width: 100px;
     font-size: 16px;
     font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ff0000;
 }
 
 .quiz_box{
     width: 550px;
-    background: #fff;
+    background: #b10a0a;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
@@ -120,7 +121,7 @@ body{
     z-index: 2;
     height: 70px;
     padding: 0 30px;
-    background: #fff;
+    background: #9e0808;
     border-radius: 5px 5px 0 0;
     display: flex;
     align-items: center;
@@ -133,14 +134,29 @@ body{
     font-weight: 600;
 }
 
+
+.quiz_box header .timer .timer_sec{
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    color: #0f0404;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    background: #343a40;
+    border: 1px solid #343a40;
+    user-select: none;
+}
+
 .quiz_box header .timer{
-    color: #004085;
-    background: #cce5ff;
-    border: 1px solid #b8daff;
-    height: 45px;
+    color: #010000;
     padding: 0 8px;
     border-radius: 5px;
     display: flex;
+    background: #7a0606;
+    border: 1px solid #000000;
+    height: 45px;
     align-items: center;
     justify-content: space-between;
     width: 145px;
@@ -151,32 +167,17 @@ body{
     font-size: 17px;
     user-select: none;
 }
-
-.quiz_box header .timer .timer_sec{
-    font-size: 18px;
-    font-weight: 500;
-    height: 30px;
-    width: 45px;
-    color: #fff;
-    border-radius: 5px;
-    line-height: 30px;
-    text-align: center;
-    background: #343a40;
-    border: 1px solid #343a40;
-    user-select: none;
-}
-
 .quiz_box header .time_line{
     position: absolute;
     bottom: 0px;
     left: 0px;
     height: 3px;
-    background: #007bff;
+    background: #0c0909;
 }
 
 section{
     padding: 25px 30px 20px 30px;
-    background: #fff;
+    background: #b00707;
 }
 
 section .que_text{
@@ -188,10 +189,19 @@ section .option_list{
     padding: 20px 0px;
     display: block;   
 }
+section .option_list .option:last-child{
+    margin-bottom: 0px;
+}
+
+section .option_list .option:hover{
+    color: #004085;
+    background: #c10827;
+    border: 1px solid #b8daff;
+}
 
 section .option_list .option{
-    background: aliceblue;
-    border: 1px solid #84c5fe;
+    background: rgb(167, 7, 7);
+    border: 1px solid #0e1113;
     border-radius: 5px;
     padding: 8px 15px;
     font-size: 17px;
@@ -203,25 +213,27 @@ section .option_list .option{
     justify-content: space-between;
 }
 
-section .option_list .option:last-child{
-    margin-bottom: 0px;
+
+.option_list .option .icon.tick{
+    color: #23903c;
+    border-color: #23903c;
+    background: #c91218;
 }
 
-section .option_list .option:hover{
-    color: #004085;
-    background: #cce5ff;
-    border: 1px solid #b8daff;
+.option_list .option .icon.cross{
+    color: #a42834;
+    background: #b90816;
+    border-color: #a42834;
 }
-
 section .option_list .option.correct{
     color: #155724;
-    background: #d4edda;
-    border: 1px solid #c3e6cb;
+    background: #9e0a1e;
+    border: 1px solid #021506;
 }
 
 section .option_list .option.incorrect{
     color: #721c24;
-    background: #f8d7da;
+    background: #920914;
     border: 1px solid #f5c6cb;
 }
 
@@ -231,25 +243,14 @@ section .option_list .option.disabled{
 
 section .option_list .option .icon{
     height: 26px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    line-height: 24px;
     width: 26px;
     border: 2px solid transparent;
     border-radius: 50%;
     text-align: center;
     font-size: 13px;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    line-height: 24px;
-}
-.option_list .option .icon.tick{
-    color: #23903c;
-    border-color: #23903c;
-    background: #d4edda;
-}
-
-.option_list .option .icon.cross{
-    color: #a42834;
-    background: #f8d7da;
-    border-color: #a42834;
 }
 
 footer{
@@ -276,22 +277,22 @@ footer .total_que span p:first-child{
 }
 
 footer button{
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
     cursor: pointer;
     border: none;
     outline: none;
-    color: #fff;
+    color: #9a0808;
     border-radius: 5px;
-    background: #0b150a;
-    border: 1px solid #ff1100;
+    background: #090b0c;
+    border: 1px solid #ff0033;
     line-height: 10px;
     opacity: 0;
     pointer-events: none;
     transform: scale(0.95);
     transition: all 0.3s ease;
-    height: 40px;
-    padding: 0 13px;
-    font-size: 18px;
-    font-weight: 400;
 }
 
 footer button:hover{
@@ -305,7 +306,7 @@ footer button.show{
 }
 
 .result_box{
-    background: #fff;
+    background: #890606;
     border-radius: 5px;
     display: flex;
     padding: 25px 30px;
@@ -321,7 +322,7 @@ footer button.show{
 
 .result_box .icon{
     font-size: 100px;
-    color: #007bff;
+    color: #ff0026;
     margin-bottom: 10px;
 }
 
@@ -348,34 +349,34 @@ footer button.show{
 }
 
 .result_box .buttons button{
-    margin: 0 10px;
-    height: 45px;
-    padding: 0 20px;
     border: none;
     outline: none;
+    height: 45px;
+    padding: 0 25px;
     border-radius: 5px;
-    border: 1px solid #007bff;
+    border: 1px solid #171c22;
     transition: all 0.3s ease;
-    font-size: 18px;
+    margin: 0 15px;
+    font-size: 22px;
     font-weight: 500;
     cursor: pointer;
 }
 
 .buttons button.restart{
     color: #fff;
-    background: #ff0000;
+    background: #ff0022;
 }
 
 .buttons button.restart:hover{
-    background: #ca023b;
+    background: #ca0216;
 }
 
 .buttons button.quit{
-    color: #007bff;
-    background: #33020b;
+    color: #ff0011;
+    background: #a20202;
 }
 
 .buttons button.quit:hover{
-    color: #fff;
-    background: #ff0040;
+    color: #000000;
+    background: #ff0037;
 }
