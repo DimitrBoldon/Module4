@@ -42,10 +42,10 @@ body{
     color: #20252a;
     padding: 25px 30px;
     outline: none;
+    cursor: pointer;
     border: none;
     border-radius: 20px;
     background: #a20505;
-    cursor: pointer;
 }
 
 .info_box{
@@ -118,13 +118,13 @@ body{
 
 .quiz_box header{
     position: relative;
-    z-index: 2;
-    height: 70px;
-    padding: 0 30px;
     background: #9e0808;
     border-radius: 5px 5px 0 0;
     display: flex;
     align-items: center;
+    z-index: 2;
+    height: 70px;
+    padding: 0 30px;
     justify-content: space-between;
     box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
 }
@@ -138,13 +138,13 @@ body{
 .quiz_box header .timer .timer_sec{
     font-size: 18px;
     font-weight: 500;
+    background: #343a40;
     height: 30px;
     width: 45px;
     color: #0f0404;
     border-radius: 5px;
     line-height: 30px;
     text-align: center;
-    background: #343a40;
     border: 1px solid #343a40;
     user-select: none;
 }
@@ -200,13 +200,13 @@ section .option_list .option:hover{
 }
 
 section .option_list .option{
+    font-size: 17px;
+    margin-bottom: 15px;
+    cursor: pointer;
     background: rgb(167, 7, 7);
     border: 1px solid #0e1113;
     border-radius: 5px;
     padding: 8px 15px;
-    font-size: 17px;
-    margin-bottom: 15px;
-    cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
@@ -225,6 +225,10 @@ section .option_list .option{
     background: #b90816;
     border-color: #a42834;
 }
+
+section .option_list .option.disabled{
+    pointer-events: none;
+}
 section .option_list .option.correct{
     color: #155724;
     background: #9e0a1e;
@@ -236,11 +240,6 @@ section .option_list .option.incorrect{
     background: #920914;
     border: 1px solid #f5c6cb;
 }
-
-section .option_list .option.disabled{
-    pointer-events: none;
-}
-
 section .option_list .option .icon{
     height: 26px;
     pointer-events: none;
@@ -326,6 +325,16 @@ footer button.show{
     margin-bottom: 10px;
 }
 
+
+.result_box .score_text span p{
+    padding: 0 4px;
+    font-weight: 600;
+}
+
+.result_box .buttons{
+    display: flex;
+    margin: 20px 0;
+}
 .result_box .complete_text{
     font-size: 20px;
     font-weight: 500;
@@ -336,16 +345,6 @@ footer button.show{
     margin: 10px 0;
     font-size: 18px;
     font-weight: 500;
-}
-
-.result_box .score_text span p{
-    padding: 0 4px;
-    font-weight: 600;
-}
-
-.result_box .buttons{
-    display: flex;
-    margin: 20px 0;
 }
 
 .result_box .buttons button{
