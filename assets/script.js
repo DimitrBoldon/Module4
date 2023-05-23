@@ -210,6 +210,16 @@ function showResult(){
     quiz_box.classList.remove("activeQuiz"); 
     result_box.classList.add("activeResult"); 
     const scoreText = result_box.querySelector(".score_text");
+    const initals = prompt("What is your initals?");
+    const scores = JSON.parse(localStorage.getItem("scores"))||[];
+    scores.push({initals, userScore});
+    localStorage.setItem("scores",JSON.stringify(scores));
+    document.querySelector(".Highscore").innerHTML= " ";
+    for (var i = 0; i < scores.length; i++){
+        var scoreEl = document.createElement("li");
+        scoreEl.innerText = scores[i].initals+" "+ scores[i].userScore;
+        document.querySelector(".Highscore").appendChild(scoreEl);
+    }
     if (userScore > 3){ 
         
         let scoreTag = '<span>and congrats! , You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';

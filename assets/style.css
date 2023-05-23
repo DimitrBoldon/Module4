@@ -305,8 +305,6 @@ footer button.show{
 .result_box{
     background: #890606;
     display: flex;
-    padding: 25px 30px;
-    width: 450px;
     align-items: center;
     flex-direction: column;
     transform: translate(-50%, -50%) scale(0.9);
