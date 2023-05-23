@@ -41,7 +41,6 @@ body{
     font-weight: 500;
     color: #20252a;
     padding: 25px 30px;
-    outline: none;
     cursor: pointer;
     border: none;
     border-radius: 20px;
@@ -87,7 +86,6 @@ body{
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     padding: 0 30px;
     border-top: 1px solid rgb(15, 2, 2);
 }
@@ -306,13 +304,11 @@ footer button.show{
 
 .result_box{
     background: #890606;
-    border-radius: 5px;
     display: flex;
     padding: 25px 30px;
     width: 450px;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
     pointer-events: none;
