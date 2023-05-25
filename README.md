@@ -19,7 +19,7 @@ N/A
 
 ## Usage
 
-![Screenshot](../assets/screenshot.jpg "screenshot") 
+![Screenshot](./assets/screenshot.JPG "screenshot") 
 
 ## Credits
 
