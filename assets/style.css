@@ -279,8 +279,6 @@ footer button{
     font-size: 18px;
     font-weight: 400;
     cursor: pointer;
-    border: none;
-    outline: none;
     color: #9a0808;
     border-radius: 5px;
     background: #090b0c;
@@ -343,7 +341,6 @@ footer button.show{
 
 .result_box .buttons button{
     border: none;
-    outline: none;
     height: 45px;
     padding: 0 25px;
     border-radius: 5px;
